@@ -81,3 +81,74 @@ width: 100%;
 .bayan-img {
     width: 80%;
 }
+
+@media (min-width: 820px) {
+    .bayan {
+        height: 100vh;
+        width: auto;
+    }
+
+    .wrapper-title {
+        font-size: 2.4em;
+    }
+
+    .bayan-title {
+        font-size: 2em;
+        font-weight: 400;
+    }
+
+    .bayan-content {
+        text-align: center;
+    }
+
+    .bayan-img {
+        width: 80%;
+    }
+
+    .bayan-icon {
+        height: 1.3em;
+    }
+}
+
+@media (min-width: 1280px) {
+    .wrapper-title {
+        font-size: 3.2em;
+    }
+
+    .bayan-title {
+        font-size: 2.6em;
+    }
+
+    .bayan-icon {
+        height: 1.6em;
+    }
+}
+
+@media (hover: hover) {
+    .bayan-icon {
+        height: 0em;
+        transition: 0.3s ease-in-out;
+    }
+
+    .bayan-item:hover .bayan-icon {
+        height: 1.6em;
+        transform: rotate(-180deg);
+    }
+
+    .bayan:hover .bayan-icon {
+        height: 1.6em;
+    }
+
+    .bayan-label {
+        cursor: pointer;
+    }
+
+    .bayan-item:hover .bayan-label .bayan-content {
+        height: 100%;
+        transform: scale(1);
+    }
+
+    .bayan:hover .bayan-title {
+        color: #000000;
+    }
+}
