@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&display=swap');
+
+body {
+    font-family: 'Aleo', serif;
+    background: #ffffff;
+}
+
+.wrapper {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+margin-top: 1em;
+width: 100%;
+}
+
+.bayan {
+    width: 90%;
+}
+
+.wrapper-title{
+    font-family: 'Aleo', serif;
+    color: #000000;
+    font-size: 1.6em;
+    font-weight: 700;
+    line-height: 1.5em;
+    margin-bottom: 0.3em;
+}
+
+.bayan-title{
+    color: #047cbe;
+    font-family: 'Aleo', serif;
+    font-size: 1.2em;
+    font-weight: 700;
+    line-height: 1.5em;
+    transition: color 0.3s ease-in-out;
+}
+
+.bayan-item {
+    border-top: 0.05em solid #0572ad;
+    padding: 0.2em 0 0 0;
+}
+
+.bayan-label-index {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bayan-input{
+    display: block;
+    height: 0em;
+    overflow: hidden;
+}
+
+.bayan-icon {
+    height: 1em;
+    transition: 0.3s ease-in-out;
+}
+
+.bayan-input:checked ~ .bayan-label .bayan-label-index .bayan-icon {
+    transform: rotate(-180deg);
+}
+
+.bayan-content{
+    height: 0em;
+    overflow: hidden;
+    text-align: center;
+    transform: scale(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.bayan-input:checked ~.bayan-label .bayan-content{
+    height: 100%;
+    transform: scale(1);
+}
+
+.bayan-input:checked ~ .bayan-label .bayan-label-index .bayan-title{
+    color: #000000;
+}
+
+.bayan-img {
+    width: 80%;
+}
