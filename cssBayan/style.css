@@ -55,6 +55,7 @@ width: 100%;
     display: block;
     height: 0em;
     overflow: hidden;
+    opacity: 0;
 }
 
 .bayan-input:checked ~ .bayan-label .bayan-label-index .bayan-icon {
