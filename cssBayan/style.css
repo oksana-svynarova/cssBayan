@@ -32,12 +32,17 @@ width: 100%;
     font-size: 1.2em;
     font-weight: 700;
     line-height: 1.5em;
-    transition: color 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .bayan-item {
     border-top: 0.05em solid #0572ad;
     padding: 0.2em 0 0 0;
+}
+
+.bayan-icon {
+    height: 0;
+    transition: all 0.3s ease-in-out;
 }
 
 .bayan-label-index {
@@ -52,13 +57,9 @@ width: 100%;
     overflow: hidden;
 }
 
-.bayan-icon {
-    height: 1em;
-    transition: 0.3s ease-in-out;
-}
-
 .bayan-input:checked ~ .bayan-label .bayan-label-index .bayan-icon {
     transform: rotate(-180deg);
+    filter: grayscale(100%) contrast(500%);
 }
 
 .bayan-content{
@@ -80,6 +81,12 @@ width: 100%;
 
 .bayan-img {
     width: 80%;
+}
+
+@media (min-width: 0px) {
+    .bayan-icon {
+        height: 1em;
+    }
 }
 
 @media (min-width: 820px) {
@@ -119,15 +126,21 @@ width: 100%;
 
 @media (hover: hover) {
     .bayan-icon {
-        height: 0em;
-        transition: 0.3s ease-in-out;
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
     }
     .bayan-item:hover .bayan-icon {
-        height: 1.6em;
+        opacity: 100%;
         transform: rotate(-180deg);
+        filter: grayscale(100%) contrast(500%);
     }
     .bayan:hover .bayan-icon {
-        height: 1.6em;
+        opacity: 100%;
+        filter: grayscale(100%) contrast(500%);
+    }
+    .bayan-title {
+        color: #047cbe;
+        transition: 0.3s ease-in-out;
     }
     .bayan-label {
         cursor: pointer;
@@ -138,6 +151,9 @@ width: 100%;
     .bayan-item:hover .bayan-label .bayan-content {
         height: 100%;
         transform: scale(1);
+    }
+    .bayan-item:active .bayan-label .bayan-label-index .bayan-icon{
+        filter: grayscale(0);
     }
     .bayan-item:active .bayan-img {
         filter: opacity(30%);
