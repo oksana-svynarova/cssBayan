@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Aleo:wght@400;700&display=swap');
+
+body {
+    font-family: 'Aleo', serif;
+    background: #ffffff;
+}
+
+.wrapper {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+margin-top: 1em;
+width: 100%;
+}
+
+.bayan {
+    width: 90%;
+}
+
+.wrapper-title{
+    font-family: 'Aleo', serif;
+    color: #000000;
+    font-size: 1.6em;
+    font-weight: 700;
+    line-height: 1.5em;
+    margin-bottom: 0.3em;
+}
+
+.bayan-title{
+    color: #047cbe;
+    font-family: 'Aleo', serif;
+    font-size: 1.2em;
+    font-weight: 700;
+    line-height: 1.5em;
+    transition: all 0.3s ease-in-out;
+}
+
+.bayan-item {
+    border-top: 0.05em solid #0572ad;
+    padding: 0.2em 0 0 0;
+}
+
+.bayan-icon {
+    height: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.bayan-label-index {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bayan-input{
+    display: block;
+    height: 0em;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.bayan-input:checked ~ .bayan-label .bayan-label-index .bayan-icon {
+    transform: rotate(-180deg);
+    filter: grayscale(100%) contrast(500%);
+}
+
+.bayan-content{
+    height: 0em;
+    overflow: hidden;
+    text-align: center;
+    transform: scale(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.bayan-input:checked ~.bayan-label .bayan-content{
+    height: 100%;
+    transform: scale(1);
+}
+
+.bayan-input:checked ~ .bayan-label .bayan-label-index .bayan-title{
+    filter: grayscale(100%) contrast(500%);
+}
+
+.bayan-img {
+    width: 80%;
+}
+
+@media (min-width: 0px) {
+    .bayan-icon {
+        height: 1em;
+    }
+}
+
+@media (min-width: 820px) {
+    .bayan {
+        height: 100vh;
+        width: auto;
+    }
+    .wrapper-title {
+        font-size: 2.4em;
+    }
+    .bayan-title {
+        font-size: 2em;
+        font-weight: 400;
+    }
+    .bayan-content {
+        text-align: center;
+    }
+    .bayan-img {
+        width: 80%;
+    }
+    .bayan-icon {
+        height: 1.3em;
+    }
+}
+
+@media (min-width: 1280px) {
+    .wrapper-title {
+        font-size: 3.2em;
+    }
+    .bayan-title {
+        font-size: 2.6em;
+    }
+    .bayan-icon {
+        height: 1.6em;
+    }
+}
+
+@media (hover: hover) {
+    .bayan-icon {
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+    }
+    .bayan-item:hover .bayan-icon {
+        opacity: 100%;
+        transform: rotate(-180deg);
+        filter: grayscale(100%) contrast(500%);
+    }
+    .bayan:hover .bayan-icon {
+        opacity: 100%;
+        filter: grayscale(100%) contrast(500%);
+    }
+    .bayan-title {
+        color: #047cbe;
+        transition: 0.3s ease-in-out;
+    }
+    .bayan-label {
+        cursor: pointer;
+    }
+    .bayan-item:active .bayan-label .bayan-label-index .bayan-title{
+        filter: grayscale(0);
+    }
+    .bayan-item:hover .bayan-label .bayan-content {
+        height: 100%;
+        transform: scale(1);
+    }
+    .bayan-item:active .bayan-label .bayan-label-index .bayan-icon{
+        filter: grayscale(0);
+    }
+    .bayan-item:active .bayan-img {
+        filter: opacity(30%);
+    }
+    .bayan:hover .bayan-title {
+        filter: grayscale(100%) contrast(500%);
+    }
+}
